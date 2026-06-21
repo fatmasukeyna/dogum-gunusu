@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import axios from 'axios';
-import ReactPlayer from 'react-player';
 import confetti from 'canvas-confetti';
 import FloatingCakes from './components/FloatingCakes';
 import cicekResmi from './assets/cicek.jpeg';
@@ -19,7 +18,6 @@ function App() {
     }
   ]);
   const [party, setParty] = useState(false);
-  const [musicUrl, setMusicUrl] = useState('');
 
 
   // --- ÖZEL CÜMLELER ---
@@ -91,15 +89,6 @@ function App() {
     };
     fetchPhotos();
   }, []);
-
-  const deletePhoto = async (id) => {
-    try {
-      await axios.delete(`${API_URL}/${id}`);
-      setPhotos(photos.filter(p => p._id !== id));
-    } catch (err) {
-      setPhotos(photos.filter(p => p._id !== id));
-    }
-  };
 
   const handleParty = () => {
     setParty(true);
