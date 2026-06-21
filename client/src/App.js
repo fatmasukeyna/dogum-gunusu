@@ -326,10 +326,10 @@ function App() {
     <div className="relative flex flex-col items-center">
       
       {/* SADECE PASTA EMOJİSİ VE ÜZERİNDEKİ CANLI ALEVLER */}
-      <div className={`relative my-12 transition-all duration-500 ${blowStage === 'blown' ? 'grayscale-[0.4] brightness-75' : ''}`}>
+      <div className={`relative my-12 w-24 h-24 flex items-center justify-center transition-all duration-500 ${blowStage === 'blown' ? 'grayscale-[0.4] brightness-75' : ''}`}>
         
         {/* Direkt Orijinal Pasta Emojisi */}
-        <div className="text-7xl select-none">
+        <div className="text-[5rem] leading-none select-none">
           🎂
         </div>
 
@@ -340,19 +340,19 @@ function App() {
             <motion.div 
               animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
               transition={{ repeat: Infinity, duration: 0.4 }}
-              className="absolute top-[-8px] left-[29px] w-2 h-4 bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full blur-[0.5px] shadow-[0_0_8px_rgba(251,146,60,0.9)] z-20"
+              className="absolute top-[4px] left-[37%] -translate-x-1/2 w-2 h-4 bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full blur-[0.5px] shadow-[0_0_8px_rgba(251,146,60,0.9)] z-20"
             />
             {/* Orta Mumun Alevi */}
             <motion.div 
               animate={{ scale: [1, 1.15, 1], opacity: [0.9, 1, 0.9] }}
               transition={{ repeat: Infinity, duration: 0.45, delay: 0.1 }}
-              className="absolute top-[-8px] left-[45px] w-2 h-4 bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full blur-[0.5px] shadow-[0_0_8px_rgba(251,146,60,0.9)] z-20"
+              className="absolute top-[2px] left-1/2 -translate-x-1/2 w-2 h-4 bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full blur-[0.5px] shadow-[0_0_8px_rgba(251,146,60,0.9)] z-20"
             />
             {/* Sağ Mumun Alevi */}
             <motion.div 
               animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
               transition={{ repeat: Infinity, duration: 0.4, delay: 0.2 }}
-              className="absolute top-[-8px] left-[62px] w-2 h-4 bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full blur-[0.5px] shadow-[0_0_8px_rgba(251,146,60,0.9)] z-20"
+              className="absolute top-[4px] left-[63%] -translate-x-1/2 w-2 h-4 bg-gradient-to-t from-orange-500 to-yellow-300 rounded-full blur-[0.5px] shadow-[0_0_8px_rgba(251,146,60,0.9)] z-20"
             />
           </>
         )}
